@@ -18,7 +18,14 @@ function App() {
     <div id="app">
       <h1>PNV Team !!</h1>
       <p>Here are some PNV trainers and educators, do you know them?</p>
-      <User /> {/* How to loop on ALL_PNV_TEACHERS list ? */}
+       {/* How to loop on ALL_PNV_TEACHERS list ? */}
+      {
+        ALL_PNV_TEACHERS.map((teacher, index)=>
+        {
+          return <User key={index} user={teacher} />
+        }
+        )
+      }
     </div>
   );
 }
